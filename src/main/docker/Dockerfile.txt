@@ -1,0 +1,6 @@
+FROM dockerfile/java:oracle-java8
+
+ADD reddy.jar /opt/reddy/
+EXPOSE 8080
+WORKDIR /opt/reddy/
+CMD ["java", "-Xms512m", "-Xmx1g", "-jar", "reddy.jar"]
